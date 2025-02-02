@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quicklist</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -29,51 +30,27 @@
         <input
           type="text"
           class="input-field"
+          id="new-item"
           placeholder="Adicione um novo item"
         />
-        <button class="add-button">Adicionar item</button>
+        <button class="add-button" id="add-item-button">Adicionar item</button>
       </div>
 
-      <div class="list">
-        <div class="list-item">
-          <input type="checkbox" class="checkbox" />
-          <span class="item-text">Pão de forma</span>
-          <button class="delete-button">
-            <img src="./assets/trash.svg" alt="lixo" />
-          </button>
-        </div>
+      <div class="list" id="item-list"></div>
 
-        <div class="list-item">
-          <input type="checkbox" class="checkbox" />
-          <span class="item-text">Café preto</span>
-          <button class="delete-button">
-            <img src="./assets/trash.svg" alt="lixo" />
-          </button>
-        </div>
-
-        <div class="list-item">
-          <input type="checkbox" class="checkbox" />
-          <span class="item-text">Suco de laranja</span>
-          <button class="delete-button">
-            <img src="./assets/trash.svg" alt="lixo" />
-          </button>
-        </div>
-
-        <div class="list-item">
-          <input type="checkbox" class="checkbox" />
-          <span class="item-text">Bolacha</span>
-          <button class="delete-button">
-            <img src="./assets/trash.svg" alt="lixo" />
-          </button>
-        </div>
-      </div>
-
-      <div class="alert">
+      <div class="alert" id="alert" style="display: none">
         <span>
-          <img src="./assets/warning.svg" /> O item foi removido da lista</span
-        >
-        <img src="./assets/x.svg" class="alert-close" alt="x" />
+          <img src="./assets/warning.svg" /> O item foi removido da lista
+        </span>
+        <img
+          src="./assets/x.svg"
+          class="alert-close"
+          alt="x"
+          id="alert-close"
+        />
       </div>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
