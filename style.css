@@ -1,8 +1,9 @@
+/* Ajuste global para responsividade */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -13,13 +14,14 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 62px;
+  margin-bottom: 40px;
 }
 
 .header {
@@ -35,13 +37,8 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin-right: 10px;
   font-size: 14px;
   font-weight: 600;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .title {
@@ -64,23 +61,6 @@ body {
   font-size: 16px;
   font-weight: 600;
   outline: none;
-
-  &::placeholder {
-    color: #9ca3af;
-  }
-
-  &:hover {
-    border-color: #b9c2d0;
-  }
-
-  &:focus {
-    border-color: #ca3884;
-    color: #080b12;
-
-    &::placeholder {
-      color: #080b12;
-    }
-  }
 }
 
 .add-button {
@@ -92,10 +72,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-
-  &:hover {
-    background-color: #a52c6b;
-  }
+  white-space: nowrap;
 }
 
 .list {
@@ -119,30 +96,9 @@ body {
   border: 2px solid #e0e0e0;
   border-radius: 7px;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   display: inline-block;
   position: relative;
   cursor: pointer;
-
-  &:hover {
-    border-color: #b9c2d0;
-  }
-
-  &:checked {
-    background-color: #ca3884;
-    border-color: #ca3884;
-  }
-
-  &:checked::after {
-    content: "✓";
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 
 .item-text {
@@ -169,11 +125,6 @@ body {
   margin-top: 36px;
   font-size: 16px;
   font-weight: 600;
-
-  span {
-    display: flex;
-    gap: 4px;
-  }
 }
 
 .alert-close {
@@ -181,4 +132,50 @@ body {
   border: none;
   cursor: pointer;
   font-size: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .add-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .list-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .input-field {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .add-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .list-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+  }
 }
